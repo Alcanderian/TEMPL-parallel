@@ -1,2 +1,3 @@
 # TEMPL-parallel
-并行计算模板：基于pthread的多线程框架，参数解析器等等
+Code is generate from RELION.
+Multithread framework base on pthread; Argument parser. 
