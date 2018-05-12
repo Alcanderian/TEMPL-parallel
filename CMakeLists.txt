@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.12)
 project(Parallel)
 
 if (CMAKE_C_COMPILER MATCHES "icc")
-    MESSAGE(STATUS "Using Intel C/C++ Compiler")
+    message(STATUS "Using Intel C/C++ Compiler")
     set(ICC)
 endif (CMAKE_C_COMPILER MATCHES "icc")
 
@@ -28,3 +28,6 @@ if(HAVE___SINCOS)
 endif()
 
 add_executable(parallel src/parallel.h src/parallel.cpp src/args.cpp src/args.h src/error.cpp src/error.h src/strings.cpp src/strings.h src/macros.h src/gcc_version.h app/main.cpp)
+
+#FIXME Intersting, no need in WIN10
+target_link_libraries(parallel pthread)

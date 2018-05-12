@@ -120,7 +120,7 @@ void *_threadMain(void *data) {
             catch (Error E) {
                 std::cerr << E << std::endl
                           << "In thread " << thArg->thread_id << std::endl;
-                //Warning: pthread_exit(NULL); doesn't work on my WIN10.
+                //FIXME: pthread_exit(NULL); doesn't work on my WIN10, but work on Linux.
                 //pthread_exit(NULL);
                 return NULL;
             }

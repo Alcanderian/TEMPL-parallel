@@ -130,7 +130,7 @@ double textToDouble(const char *str,
 inline double textToDouble(const std::string &str,
                            int _errno = 2101,
                            std::string errmsg = "Error in textToDouble") {
-    return textToDouble(str.c_str(), _errno, std::move(errmsg));
+    return textToDouble(str.c_str(), _errno, errmsg);
 }
 
 /** String (char*) to float conversion.
@@ -152,7 +152,7 @@ float textToFloat(const char *str,
 inline float textToFloat(const std::string &str,
                          int _errno = 2101,
                          std::string errmsg = "Error in textToFloat") {
-    return textToFloat(str.c_str(), _errno, std::move(errmsg));
+    return textToFloat(str.c_str(), _errno, errmsg);
 }
 
 /** String (char*) to integer conversion.
@@ -174,7 +174,7 @@ int textToInteger(const char *str,
 inline int textToInteger(const std::string &str,
                          int _errno = 2102,
                          std::string errmsg = "Error in textToInteger") {
-    return textToInteger(str.c_str(), _errno, std::move(errmsg));
+    return textToInteger(str.c_str(), _errno, errmsg);
 }
 
 /** String (char*) to long long integer conversion.
